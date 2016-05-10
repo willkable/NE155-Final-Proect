@@ -44,7 +44,7 @@ def Vars(n, xrange, yrange, Source, Sig_T, Sig_A, isPoint):
     S = np.zeros((n, n))
     if isPoint[0] == 1:  # Checks to See if Source is a Point/(s)
         for i in range(0, len(Source)):
-            S[isPoint[i + 1][0]][isPoint[i + 1][1]] = Source[i]
+            S[isPoint[i + 1][1]][isPoint[i + 1][0]] = Source[i]
     elif isPoint[0] == 0:  # Checks to See if Source is Uniform
         S = Source[0] * np.ones((n, n))
     D = 1 / (3 * Sig_T)
