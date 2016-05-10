@@ -15,7 +15,7 @@ from numpy import *
 from numpy import linalg as LA
 from numpy.linalg import inv, norm
 from tkinter import *
-from tkinter import ttk
+from tkinter.ttk import *
 
 warnings.filterwarnings("ignore")
 
@@ -26,7 +26,7 @@ def Gauss_Seidel(A, B, x, tol):
     # tol - absolute tolerance for convergence. (Can be adjusted)
     Y = np.tril(A)
     Z = A - Y
-    Max_Iter = 1000
+    Max_Iter = 10000
     iters = 0
     for i in range(Max_Iter):
         iters += 1
@@ -288,11 +288,14 @@ def input_vars():
 def Export():
     n, xrange, yrange, Source, Sig_T, Sig_A, isPoint, tol = input_vars()
     Flux, iters, meshx, meshy = (FinVol(n, xrange, yrange, Source, Sig_T, Sig_A, isPoint, tol))
-    np.savetxt(export_name.get(), Flux, delimiter=',')
+    np.savetxt(export_name.get(), [Sig_T, Sig_A, tol, Flux], delimiter=',')
 
 
 # tkinter portion
 master = Tk()
+style = Style()
+style.configure("BW.TLabel", foreground="black", background="white")
+style.theme_use('classic')
 Tk.iconbitmap(master, default='icon.ico')
 Tk.wm_title(master, "2D Diffusion Equation Solver                       By:Will Kable")
 Label(master, text="Mesh Size").grid(row=1, column=3)
@@ -347,6 +350,6 @@ Button(master, text='Side Plot', command=Side_View).grid(row=2, column=1, sticky
 Button(master, text='Heat Map', command=Heat_Map).grid(row=3, column=1, sticky=W, pady=4)
 Button(master, text='Export Data', command=Export).grid(row=4, column=1, sticky=W, pady=4)
 
-master.geometry('%dx%d+%d+%d' % (680, 200, 0, 0))
+master.geometry('%dx%d+%d+%d' % (680, 260, 0, 0))
 master.mainloop()
 # end GUI Creation-------------------------------------------------------
