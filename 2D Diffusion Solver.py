@@ -295,7 +295,7 @@ def Export():
 master = Tk()
 Tk.iconbitmap(master, default='icon.ico')
 Tk.wm_title(master, "2D Diffusion Equation Solver                       By:Will Kable")
-Label(master, text="Number of Meshes [cm]").grid(row=1, column=3)
+Label(master, text="Mesh Size").grid(row=1, column=3)
 Label(master, text="Lower X Boundary [cm]").grid(row=2, column=3)
 Label(master, text="Upper X Boundary [cm]").grid(row=3, column=3)
 Label(master, text="Lower Y Boundary [cm]").grid(row=4, column=3)
