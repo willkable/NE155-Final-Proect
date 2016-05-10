@@ -24,6 +24,6 @@ Instructions:
 9. Once all information is entered you may create a Surface/Heat/Side Plot of the Flux Solution. You may also export the flux solution
    to a file you specify under the 'Export Data' button. A default 'Out.txt' is already specified.
 
-The 3 test output files included were create I created with the system conditions in the 'Test_Inputs.txt' file.
+The 3 test output files included were created with the system conditions in the 'Test_Inputs.txt' file.
 
 
