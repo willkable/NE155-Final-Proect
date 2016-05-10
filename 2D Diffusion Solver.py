@@ -306,7 +306,6 @@ Label(master, text="Sigma Transport [1/cm]").grid(row=3, column=5)
 Label(master, text="Sigma Absorption [1/cm]").grid(row=4, column=5)
 Label(master, text="Tolerance").grid(row=5, column=5)
 
-
 n = Entry(master)
 n.insert(0, 30)
 n.grid(row=1, column=4)
