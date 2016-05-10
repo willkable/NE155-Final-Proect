@@ -288,7 +288,7 @@ def input_vars():
 def Export():
     n, xrange, yrange, Source, Sig_T, Sig_A, isPoint, tol = input_vars()
     Flux, iters, meshx, meshy = (FinVol(n, xrange, yrange, Source, Sig_T, Sig_A, isPoint, tol))
-    np.savetxt(export_name.get(), [Sig_T, Sig_A, tol, Flux], delimiter=',')
+    np.savetxt(export_name.get(), Flux, delimiter=',')
 
 
 # tkinter portion
