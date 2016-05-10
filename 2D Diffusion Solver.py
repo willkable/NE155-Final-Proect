@@ -353,5 +353,5 @@ Button(master, text='Heat Map', command=Heat_Map).grid(row=3, column=1, sticky=W
 Button(master, text='Export Data', command=Export).grid(row=4, column=1, sticky=W, pady=4)
 
 master.geometry('%dx%d+%d+%d' % (680, 260, 0, 0))
-master.mainloop()
+master.tk.mainloop()
 # end GUI Creation-------------------------------------------------------
