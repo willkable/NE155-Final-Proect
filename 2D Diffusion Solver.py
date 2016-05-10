@@ -288,7 +288,7 @@ def input_vars():
 def Export():
     n, xrange, yrange, Source, Sig_T, Sig_A, isPoint, tol = input_vars()
     Flux, iters, meshx, meshy = (FinVol(n, xrange, yrange, Source, Sig_T, Sig_A, isPoint, tol))
-    np.savetxt('TestOut3.txt', Flux, delimiter=',')
+    np.savetxt(export_name.get(), Flux, delimiter=',')
 
 
 # tkinter portion
@@ -337,7 +337,9 @@ Sig_A.grid(row=4, column=6)
 tol = Entry(master)
 tol.insert(0, 0.0000001)
 tol.grid(row=5, column=6)
-
+export_name = Entry(master)
+export_name.insert(0, 'Out.txt')
+export_name.grid(row=5, column=1)
 var = IntVar()
 Checkbutton(master, text="Is the Source Uniform", variable=var, command=dis).grid(row=6, column=6, sticky=W, pady=4)
 Button(master, text='Close', command=close_window).grid(row=6, column=1, sticky=W, pady=4)
@@ -346,6 +348,6 @@ Button(master, text='Side Plot', command=Side_View).grid(row=2, column=1, sticky
 Button(master, text='Heat Map', command=Heat_Map).grid(row=3, column=1, sticky=W, pady=4)
 Button(master, text='Export Data', command=Export).grid(row=4, column=1, sticky=W, pady=4)
 
-master.geometry('%dx%d+%d+%d' % (620, 200, 0, 0))
+master.geometry('%dx%d+%d+%d' % (680, 200, 0, 0))
 master.mainloop()
 # end GUI Creation-------------------------------------------------------
