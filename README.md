@@ -17,7 +17,7 @@ Instructions:
    Where i,j are integers in the range(n). You may simply enter these mesh coordinates in the form 'x1,y1' in the box labeled 
    'Source Mesh Location'. An example should already be in the box.
 6. If there are multiple sources you may enter them as well. In the box labeled 'Source(s)' enter your source strengths in
-   the form 'S1,S2,....Sn' for as many sources as you have. Again an example should already be in the box. To places these
+   the form 'S1,S2,....Sn' for as many sources as you have. Again an example should already be in the box. To place these
    Sources on the mesh, do the same as you did in part 5. However now you can input in the form 'x1, y1,x2,y2,....,xn,yn'
 7. For the macroscopic cross sections simply input some non-zero/non-negative values for the absorption and transport cross section
 8. You may also input a tolerance to be used in the Gauss-Seidel iteration method. The default is set at 1e-7.
