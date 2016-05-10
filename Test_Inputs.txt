@@ -19,7 +19,7 @@ Upper Y: 6                  Tolerance: 1e-7
 TestOut3.txt
 
 Mesh Size: 20               Source(s):500,500,500
-Lower X:-1                  Source Mesh Location: 4, 4,8,8,12,12
+Lower X:-1                  Source Mesh Location:4,4,8,8,12,12
 Upper X: 1                  Sigma Transport: 1.10
 Lower Y:-1                  Sigma Absorption: 1.20
 Upper Y: 1                  Tolerance: 1e-7
