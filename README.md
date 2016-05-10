@@ -24,32 +24,6 @@ Instructions:
 9. Once all information is entered you may create a Surface/Heat/Side Plot of the Flux Solution. You may also export the flux solution
    to a file you specify under the 'Export Data' button. A default 'Out.txt' is already specified.
 
-Because I created a GUI that can input many different system conditions, I did not include test input files. However, I have included 3 
-test output files that I created with the following system conditions
+The 3 test output files included were create I created with the system conditions in the 'testinputs.txt' file.
 
-TestOut1.txt (Default Scenario Already Input When Program Starts)
 
-Mesh Size: 30               Source(s):10000, 1000
-Lower X:-1                  Source Mesh Location: 10, 20,2,2
-Upper X: 1                  Sigma Transport: 0.45
-Lower Y:-1                  Sigma Absorption: 0.1
-Upper Y: 1                  Tolerance: 1e-7
-                            Is Not Uniform Mesh
-                            
-TestOut2.txt  
-
-Mesh Size: 15               Source(s):10000
-Lower X:-5                  Source Mesh Location:
-Upper X: 4                  Sigma Transport: 0.45
-Lower Y:-3                  Sigma Absorption: 0.1
-Upper Y: 6                  Tolerance: 1e-7
-                            Is a Uniform Mesh
-                            
-TestOut3.txt  
-
-Mesh Size: 20               Source(s):500,500,500
-Lower X:-1                  Source Mesh Location: 4, 4,8,8,12,12
-Upper X: 1                  Sigma Transport: 1.10
-Lower Y:-1                  Sigma Absorption: 1.20
-Upper Y: 1                  Tolerance: 1e-7
-                            Is Not Uniform Mesh
